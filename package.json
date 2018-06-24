@@ -1,0 +1,30 @@
+{
+  "name": "gopen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "configFile": ".gopenrc",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "test": "mocha-webpack --webpack-config webpack.test-config.js \"./src/**/*.test.js\"",
+    "test-watch": "mocha-webpack --watch --webpack-config webpack.test-config.js \"./src/**/*.test.js\""
+  },
+  "bin": {
+    "gopen": "dist/cli.js"
+  },
+  "dependencies": {
+    "fs-copy-file-sync": "^1.1.1",
+    "opn": "^5.3.0",
+    "shelljs": "^0.8.2",
+    "ssh-parse": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "mocha-webpack": "next",
+    "webpack": "^4.12.0",
+    "webpack-command": "^0.2.1",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
